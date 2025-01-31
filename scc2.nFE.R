@@ -1,5 +1,4 @@
 getwd()
-setwd("/Users/oashna/Documents/Shira_lab/PhD/thesis/review/scc2.nFE")
 CBS=bed[,c(1:6)]      
 
 #input bg file
