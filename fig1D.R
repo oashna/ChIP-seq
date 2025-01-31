@@ -1,5 +1,5 @@
 getwd()
-setwd("/Users/oashna/OneDrive - The University of Tokyo/MicroC/Scer.genes/fig1D.norm2/")
+
 peak <- read.table("2020_004B_36.nocen.bed", stringsAsFactors = F)
 ratio <- read.table("230607-PCE-sm1000_54I1.norm2.ratio.100.bedGraph", stringsAsFactors = F)
 cpm <- read.table("54I1.100.bedGraph",stringsAsFactors = F)
@@ -98,7 +98,7 @@ ggscatter(peak2, x="ratio36", y="scc1FC",
 #          cor.coef=T, cor.method="spearman", 
           xlab="Scc1dd", ylab="Scc2dd")
 group <- list()
-for (i in c(1:941)){
+for (i in c(1:nrow(peak2)){
   if (peak2[i,14] < 0 & peak2[i,15] < 0){
     group <- append(group,"bothDown")
   } else if (peak2[i,14] < 0 & peak2[i,15] > 0) {
