@@ -1,5 +1,3 @@
-getwd()
-setwd("/Users/oashna/Documents/Shira_lab/PhD/thesis/review/scc1.nFE")
 wt=read.table("wt.bedGraph",stringsAsFactors = F)
 dd=read.table("dd.bedGraph", stringsAsFactors = F)
 wtGlu=read.table("wt_glu.bedGraph",stringsAsFactors = F)
@@ -8,9 +6,6 @@ galE=read.table("GalE_glu.bedGraph",stringsAsFactors = F)
 #extract chrom number
 chrom_No(dd)
 dd <- df
-head(galE)
-
-head(CBS)
 
 #calculate maxFE
 maxFE(x,galE)
