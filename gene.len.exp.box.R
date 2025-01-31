@@ -1,4 +1,3 @@
-setwd("/Users/oashna/Documents/Shira_lab/PhD/thesis/review/gene.len.expression/")
 
 ##compare gene length between Scc1-associated CEN-oriented and TEL-oriented genes
 scc1Gene <- read.table("scc1P.gene.valid.bed", stringsAsFactors = F)
