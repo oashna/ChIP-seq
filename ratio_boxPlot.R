@@ -1,5 +1,5 @@
 getwd()
-setwd("/Users/oashna/Documents/Shira_lab/PhD/thesis/review/scc2.scc1.ratio")
+
 
 #input: bg file, bed file
 bed <- read.table("36_sm1000_nocen.bed", stringsAsFactors = F)
@@ -20,9 +20,8 @@ wt12 <- wt1[wt1$V1 != "chr2micron",]
 head(wt12,10)
 
 temp<- strsplit(wt12[,1], "chr")
-length(temp)
 temp2<- numeric(0)
-for(i in c(1:121248)){
+for(i in c(1:length(temp)){
   temp2<- c(temp2, as.numeric(as.roman(temp[[i]][2])))
 }
 table(temp2)
@@ -35,9 +34,8 @@ dd2 <- dd[dd$V1 != "chr2micron",]
 head(dd2,10)
 
 temp<- strsplit(dd2[,1], "chr")
-length(temp)
 temp2<- numeric(0)
-for(i in c(1:121285)){
+for(i in c(1:length(temp)){
   temp2<- c(temp2, as.numeric(as.roman(temp[[i]][2])))
 }
 table(temp2)
@@ -48,7 +46,7 @@ head(dd2,3)
   #for wt
 wt1_ratio <- numeric(0)
 temp <- numeric(0)
-for (i in c(1:966)){
+for (i in c(1:nrow(bed))){
   temp <- which(wt12[,5] == bed[i,6] &
                 wt12[,2] >= (bed[i,2]-50) &
                 wt12[,2] <= (bed[i,3]-50))
@@ -60,7 +58,7 @@ head(bed)
   #for dd
 dd_ratio <- numeric(0)
 temp <- numeric(0)
-for (i in c(1:966)){
+for (i in c(1:nrow(bed)){
   temp <- which(dd2[,5] == bed[i,6] &
                   dd2[,2] >= (bed[i,2]-50) &
                   dd2[,2] <= (bed[i,3]-50))
@@ -171,7 +169,7 @@ head(bed2,10)
 temp <- strsplit(bed2[,1], "chr")
 length(temp)
 temp2<- numeric(0)
-for(i in c(1:178)){
+for(i in c(1:length(temp)){
   temp2<- c(temp2, as.numeric(as.roman(temp[[i]][2])))
 }
 table(temp2)
@@ -181,7 +179,7 @@ bed2$chr2 <- temp2
   #wt
 wt_ratio2 <- numeric(0)
 temp <- numeric(0)
-for (i in c(1:178)){
+for (i in c(1:nrow(bed2)){
   temp <- which(wt2[,5] == bed2[i,6] &
                   wt2[,2] >= (bed2[i,2]-50) &
                   wt2[,2] <= (bed2[i,3]-50))
@@ -193,7 +191,7 @@ head(bed2,10)
   #dd
 dd_ratio2 <- numeric(0)
 temp <- numeric(0)
-for (i in c(1:178)){
+for (i in c(1:nrow(bed2)){
   temp <- which(dd2[,5] == bed2[i,6] &
                   dd2[,2] >= (bed2[i,2]-50) &
                   dd2[,2] <= (bed2[i,3]-50))
