@@ -109,25 +109,6 @@ box
 #normalization
 median(bed2$wt1_ratio)
 
-bed$rWtGal <- 2**bed$wt_ratio 
-bed$rGalE <- 2**bed$galE_ratio
-bed$rWt <- 2**bed$wt1_ratio
-bed$rDD <- 2**bed$dd_ratio
-median(bed$rWt)
-
-head(bed)
-log2((2**(median(bed$wt_ratio)))*(1/2**(median(bed$wt_ratio))))
-
-bed$normWtGal <- log2((2**bed$wt_ratio) * (1/median(2**bed$wt_ratio)))
-bed$normGalE <- log2(bed$rGalE * (1/median(2**bed$wt_ratio)))
-bed$normDD <- log2(bed$rDD * (1/0.7383672))
-bed$normWt <- log2((2**bed$wt1_ratio) * (1/median(2**bed$wt1_ratio)))
-median(bed$normWtGal)
-median(bed$normGalE)
-median(bed$normWt)
-median(bed$normDD)
-2**0.3724064
-2**1.342164
 
 nbed1 <- bed[,c(13:14)]
 colnames(nbed1) <- c("treatment","control")
